@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Nav from "./Nav";
-import styled from "styled-components";
 import Footer from "./Footer";
 import Slider from "./ImgSlider";
 import Trending from "./Trending"
@@ -25,15 +24,15 @@ const Home = () => {
 
   // eslint-disable-next-line no-lone-blocks
   return (
-    <div style={{backgroundColor:"#212529"}}>
+    <div style={{backgroundColor:"#212529",overflow:"hidden"}}>
       <Nav></Nav>
-      <Slider slide={products}></Slider> 
+      <Slider slide={products}></Slider>
       <Trending trend={products}></Trending>
       <Premium image={products}></Premium>
       {/*{cards.map(card => 
              (<Card data={card}></Card>
-             ))}
-          <Footer></Footer>*/}
+             ))}*/}
+          <Footer></Footer>
     </div>
   );
 };
